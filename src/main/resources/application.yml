@@ -1,0 +1,24 @@
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAXFT5ZFO24IQOPWGR
+      secret-key: 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
+    region:
+      static: us-east-1
+    stack:
+      auto: false
+
+application:
+  bucket:
+    name: abhishekambulkarbucket
+
+
+server:
+  port: 9091
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
