@@ -1,1 +1,45 @@
+apiVersion: apps/v1
 
+kind: Deployment
+
+metadata:
+
+  name: web-deploy
+
+  labels:
+
+    app: web
+
+spec:
+
+  replicas: 1
+
+  selector:
+
+    matchLabels:
+
+      app: web
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: web
+
+    spec:
+
+      terminationGracePeriodSeconds: 1
+
+      containers:
+
+      - name: storage-pod
+
+        image: abhishekambulkar/new
+
+        imagePullPolicy: Always
+
+        ports:
+
+        - containerPort: 9091
