@@ -58,6 +58,7 @@ public class StorageConfig {
         return cfg;
 
     }
+    Regions region = Regions.US_WEST_2;
 
     private AmazonS3Client getAmazonDynamoDBLocalClient(Regions region) {
         return (AmazonS3Client) AmazonS3ClientBuilder.standard()
